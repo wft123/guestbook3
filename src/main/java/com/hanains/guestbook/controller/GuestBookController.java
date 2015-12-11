@@ -33,13 +33,13 @@ public class GuestBookController {
 	}
 	
 	@RequestMapping("/deleteform")
-	public String add(Model model, @RequestParam("no") int no){
+	public String deleteform(Model model, @RequestParam("no") int no){
 		model.addAttribute("no", no);
 		return "/WEB-INF/views/deleteform.jsp";
 	}
 	
 	@RequestMapping(value="/delete", method=RequestMethod.POST )
-	public String add(Model model,@RequestParam("no") int no, @RequestParam("password") String password){
+	public String delete(Model model,@RequestParam("no") int no, @RequestParam("password") String password){
 		int result = dao.delete(no, password);
 		if(result>0){
 			return "redirect:/";

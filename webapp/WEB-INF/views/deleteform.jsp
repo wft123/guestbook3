@@ -12,6 +12,7 @@
 		</script>
 	</c:if>
 	<form method="post" action="${pageContext.request.contextPath }/delete">
+	${no }
 	<input type='hidden' name="no" value="${no }">
 	<table>
 		<tr>
